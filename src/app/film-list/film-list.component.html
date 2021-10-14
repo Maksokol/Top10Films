@@ -1,0 +1,13 @@
+<table class="table table-striped table-bordered">
+  <thead>
+  <tr><th></th><th>Name</th><th>Score</th><th>About</th></tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of getFilmItems();">
+    <td>{{item.Name}}</td>
+    <td>{{item.Score}}</td>
+    <td>{{item.About}}</td>
+  </tr>
+  </tbody>
+</table>
+

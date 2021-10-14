@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FilmListComponent} from "./film-list/film-list.component";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Top10Films';
+  List = new FilmListComponent();
+
+
+
+
 }
+
+
