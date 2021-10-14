@@ -1,2 +1,9 @@
-<app-card *ngFor="let iCard of TCards"
+<div>
+  <input type="text" #searchText>
+</div>
+
+<div class="FilmContainer card-group row-cols-auto">
+<app-card class="mb-2" *ngFor="let iCard of TCards;let i = index"
+
 [card]="iCard"></app-card>
+</div>

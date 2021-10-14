@@ -1,8 +1,11 @@
-<div class="Card ">
-  <div>{{this.card.Name}}</div>
-  <img src="{{this.card.Img}}" alt="">
-  <div class="score">{{this.card.Score}}</div>
-  <p>{{this.card.About}}</p>
+<div class="card border border-2 m-2 p-0 rounded h-100" style="max-width: 340px">
+  <img src="{{this.card.Img}}" alt="" class="card-img-top " >
+  <div class="card-body">
+  <h5 class="card-title">{{this.card.Name}}</h5>
+  <p class="card-text">{{this.card.About}}</p>
+  </div>
+  <p class="card-footer mb-0" [ngStyle]="{color:card.Score>7 ? 'lime' : card.Score>5 ? 'black' : 'red'} ">{{this.card.Score }}</p>
+
 
 
 </div>
