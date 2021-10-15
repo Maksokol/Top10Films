@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {CardComponent} from "./card/card.component";
 
 export interface Card{
   Name:string;
@@ -29,7 +28,7 @@ export class AppComponent {
   //Cards : Array<CardComponent> =[];
 
   getFilteredFilms(search:string) {
-    return this.TCards;//.filter(this.TCards.filter(t => t.Name.includes(search)));
+    return this.TCards.filter(t => t.Name.toLowerCase().includes(search));
   }
 
 
