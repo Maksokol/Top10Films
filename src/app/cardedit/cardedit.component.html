@@ -1,0 +1,17 @@
+
+<div *ngIf="card.Id == -1" >{{gohome()}}</div>
+<form >
+
+  <div>
+    <img src="{{card.ImgL}}" alt="" class=" img-thumbnail " style="max-width: 340px;margin-left: 40%;"/>
+      <h3 class="card-title align-self-center">{{card.Name}}</h3>
+      <textarea class="form-control" id="TextAbout" rows="3" #Ab>{{card.About}}</textarea>
+      <ngb-rating style="transform: scale(2); margin: 2em 5em" [(rate)]="card.Score">
+      </ngb-rating>
+      <pre >Оценка: <b [ngStyle]="{color:card.Score>7 ? 'lime' : card.Score>5 ? 'black' : 'red'} ">{{card.Score}}</b></pre>
+
+  <br>
+  <button (click)="edit(Ab.value)" [routerLink]="'/'">Сохранить</button>
+
+  </div>
+</form>

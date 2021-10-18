@@ -1,0 +1,9 @@
+<div class="m-t-1 m-b-1 form-control container-xl">
+  <input class="p-1 m-0 text-black border-0" style="width: 100%; font-size: 14pt" placeholder="Поиск" #searchText (keyup)="''"/>
+</div>
+
+<div class="FilmContainer card-group row-cols-auto">
+  <app-card class="mb-2" *ngFor="let iCard of getFilteredFilms(searchText.value.toLowerCase());let i = index"
+
+            [card]="iCard"></app-card>
+</div>
