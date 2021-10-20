@@ -1,17 +1,18 @@
-
-<div *ngIf="card.Id == -1" >{{gohome()}}</div>
-<form >
-
-  <div>
-    <img src="{{card.ImgL}}" alt="" class=" img-thumbnail " style="max-width: 340px;margin-left: 40%;"/>
-      <h3 class="card-title align-self-center">{{card.Name}}</h3>
-      <textarea class="form-control" id="TextAbout" rows="3" #Ab>{{card.About}}</textarea>
-      <ngb-rating style="transform: scale(2); margin: 2em 5em" [(rate)]="card.Score">
-      </ngb-rating>
-      <pre >Оценка: <b [ngStyle]="{color:card.Score>7 ? 'lime' : card.Score>5 ? 'black' : 'red'} ">{{card.Score}}</b></pre>
-
-  <br>
-  <button (click)="edit(Ab.value)" [routerLink]="'/'">Сохранить</button>
+<form>
+  <div class="m-5 form-group">
+    <img src="{{card.ImgL}}" alt="" class="img-thumbnail" style="max-width: 340px;display:block;margin:auto;"/>
+    <h3 class="card-title" style="text-align: center">
+      {{card.Name}}
+    </h3>
+    <textarea class="form-control" name="card.About" rows="4" [(ngModel)]="card.About"></textarea>
+    <ngb-rating style="height: 80px; left: 50em;" [(rate)]="card.Score"></ngb-rating>
+    <b [ngStyle]="{color:card.Score>7 ? 'lime' : card.Score>5 ? 'black' : 'red'} ">
+      {{card.Score}}/10
+    </b>
+    <br>
+    <button class="btn-primary btn-lg m-3" style="position: absolute;left: 5em;" (click)="edit()">
+      Сохранить
+    </button>
 
   </div>
 </form>

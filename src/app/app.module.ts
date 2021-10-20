@@ -10,6 +10,7 @@ import {routing} from "./app.routing";
 import { MainComponent } from './main/main.component';
 import { CardeditComponent } from './cardedit/cardedit.component';
 import {CardService} from "./card.service";
+import {FormsModule} from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import {CardService} from "./card.service";
     BrowserModule,
     NgbModule,
     RouterModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [CardService],
   bootstrap: [AppComponent]

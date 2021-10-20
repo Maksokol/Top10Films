@@ -1,13 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
-export interface Card{
-  Id:number;
-  Name:string;
-  Img:string;
-  ImgL:string;
-  Score:number;
-  About:string;
-}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,12 +7,6 @@ export interface Card{
 })
 export class AppComponent {
   title = 'Top10Films';
-
-
-
-
-
-
 
 
 }
