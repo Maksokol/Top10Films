@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { EditGuard } from './edit.guard';
+import {EditGuard} from './edit.guard';
 
 describe('EditGuard', () => {
   let guard: EditGuard;

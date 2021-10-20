@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Card} from "./module/card";
 
 @Injectable({
@@ -88,14 +88,15 @@ export class CardService {
     }
   ];
 
-  constructor() { }
-
-  edit(card : Card){
-    this.Cards[this.Cards.findIndex(t=>t.Id===card.Id)] = card;
+  constructor() {
   }
 
-  isExist(id:number){
-    let i = this.Cards.findIndex(t=>t.Id==id);
+  edit(card: Card) {
+    this.Cards[this.Cards.findIndex(t => t.Id === card.Id)] = card;
+  }
+
+  isExist(id: number) {
+    let i = this.Cards.findIndex(t => t.Id == id);
     return (i != -1);
   }
 }

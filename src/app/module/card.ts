@@ -1,4 +1,3 @@
-
 export interface Card {
   Id: number;
   Name: string;

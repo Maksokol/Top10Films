@@ -39,7 +39,6 @@ export class CardComponent implements OnInit {
     private activeRoute: ActivatedRoute,
     private SCard: CardService
   ) {
-
   }
 
   ngOnInit(): void {

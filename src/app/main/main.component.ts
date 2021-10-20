@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CardService} from "../card.service";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-main',
@@ -8,14 +9,10 @@ import {CardService} from "../card.service";
 
 })
 export class MainComponent implements OnInit {
+  search = new FormControl('');
 
-
-  getFilteredFilms(search: string) {
-    return this.SCard.Cards.filter(t => t.Name.toLowerCase().includes(search));
-  }
-
-  getFilmIndex(id: number) {
-    return this.SCard.Cards.findIndex(t => t.Id == id)
+  getFilteredFilms() {
+    return this.SCard.Cards.filter(t => t.Name.toLowerCase().includes(this.search.value.toLowerCase()));
   }
 
   constructor(private SCard: CardService) {
